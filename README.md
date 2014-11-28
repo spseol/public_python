@@ -1,5 +1,5 @@
-public_pytho
+public_pythoml
 =============
 
-Ukázková flask aplikace
+Ukázková  aplikace pro web framework [Flask](http://flask.pocoo.org/).
 
