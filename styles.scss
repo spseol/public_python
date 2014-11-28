@@ -1,0 +1,51 @@
+$zelena: #ccffcc;
+$modra: #688EA1; 
+$cervena: #DD5756;
+$seda: #eeeeee;
+$pisek: #FACC15;
+
+
+body {
+    background-color: $seda;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+h1 {
+    a {
+        color: #bb8800;
+    }
+}
+
+ul#nav {
+  margin: 1ex auto;
+  /* text-align: center; */
+  font-weight: bold;
+  li {
+    display: inline-block;
+    border: 1px black solid;
+    a {
+      display: block;
+      background-color: $zelena;
+      padding: 2ex;
+    }
+  }
+}
+
+
+footer {
+    padding: 0.1ex 2em ;
+    margin-top: 2em;
+    border-top: solid 2px $pisek;
+    background-color: $zelena;
+}
+
+
+.login {
+    display: inline-block;
+    float: right;
+    width: 30%;
+    border: orange solid 2px;
+    padding: 1ex;
+}
+

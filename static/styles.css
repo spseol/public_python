@@ -1,0 +1,32 @@
+body {
+  background-color: #eeeeee;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+h1 a {
+  color: #bb8800; }
+
+ul#nav {
+  margin: 1ex auto;
+  /* text-align: center; */
+  font-weight: bold; }
+  ul#nav li {
+    display: inline-block;
+    border: 1px black solid; }
+    ul#nav li a {
+      display: block;
+      background-color: #ccffcc;
+      padding: 2ex; }
+
+footer {
+  padding: 0.1ex 2em;
+  margin-top: 2em;
+  border-top: solid 2px #facc15;
+  background-color: #ccffcc; }
+
+.login {
+  display: inline-block;
+  float: right;
+  width: 30%;
+  border: orange solid 2px;
+  padding: 1ex; }

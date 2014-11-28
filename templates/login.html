@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+{% block obsah %}
+
+<h1>Login</h1>
+
+  {% if spatne is defined %}
+    <p style="color: red;"><strong>
+    Špatné přihlašovací údaje! Zkuste to znovu.</strong></p>
+  {% endif %}
+
+  {% if dobre is defined %}
+    <p style="color: red;">
+    <strong>Jsi tu. Hurááá.</strong></p>
+  {% endif %}
+
+  {% if not 'user' in session %}
+    <form method="post" action="{{url_for('login')}}">
+      <p>
+        jméno:<br /><input type="text" name="jmeno"> <br />
+        heslo:<br /><input type="password" name="heslo">
+      </p>
+      <p>
+        <input type="submit" value="Pošli to!">
+      </p>
+    </form>
+  {% else %}
+     <p>Jsi přihlášen jako {{session["user"]}}. 
+     <a href="{{url_for('logout')}}">Odhlásit se</a>.</p>
+  {% endif %}
+
+{% endblock obsah %}
