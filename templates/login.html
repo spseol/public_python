@@ -5,21 +5,27 @@
 
 <h1>Login</h1>
 
+  <p style="color: red;"><strong>
   {% if spatne is defined %}
-    <p style="color: red;"><strong>
-    Špatné přihlašovací údaje! Zkuste to znovu.</strong></p>
+    Špatné přihlašovací údaje! Zkuste to znovu.
   {% endif %}
-
   {% if dobre is defined %}
-    <p style="color: red;">
-    <strong>Jsi tu. Hurááá.</strong></p>
+    Jsi tu. Hurááá.
   {% endif %}
+  {% if prihlasit is defined %}
+    Tato stránka vyžaduje přihlášení.
+  {% endif %}
+  </strong></p>
+
 
   {% if not 'user' in session %}
     <form method="post" action="{{url_for('login')}}">
       <p>
         jméno:<br /><input type="text" name="jmeno"> <br />
         heslo:<br /><input type="password" name="heslo">
+        {% if prihlasit is defined %}
+          <input type="hidden" name="url" value="{{prihlasit}}">
+        {% endif %}
       </p>
       <p>
         <input type="submit" value="Pošli to!">

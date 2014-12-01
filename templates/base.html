@@ -36,20 +36,29 @@
   <ul id="nav">
     <li><a href="{{ url_for('index') }}">Domů</a></li>
     <li><a href="{{ url_for('onas') }}">O nás</a></li>
-    <li><a href="{{ url_for('kapela') }}">Kapela</a></li>
-    <li><a href="{{ url_for('skola') }}">Škola</a></li>
+    {% if 'user' in session %}
+      <li><a href="{{ url_for('kapela') }}">Kapela</a></li>
+      <li><a href="{{ url_for('skola') }}">Škola</a></li>
+    {% endif %}
   </ul>
 
   {% block obsah %}
 
     <h1>Flask <a href="{{ url_for('index') }}">pokus</a></h1>
-
     <ul>
         {% for s in slova  %}
             <li>Je to {{s}}.</li>
         {% endfor %}
-        
     </ul>
+
+<p>Ukázková  aplikace pro web framework <a
+  href="http://flask.pocoo.org/">Flask</a>. </p>
+
+<p>Zdrojové kódy najdete na <a
+  href="http://github.com/spseol/public_python/">Githubu</a>.</p>
+
+<p>Pokud si chcete vyzkoušet přihlášení, použijte přihlašovací jméno 
+<code>marek</code> a libovolné heslo.</p>
 
   {% endblock obsah %}
 
