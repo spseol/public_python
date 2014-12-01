@@ -1,4 +1,5 @@
 __virenv__/
+*.css.map
 .sass-cache/
 *.swp
 # Byte-compiled / optimized / DLL files

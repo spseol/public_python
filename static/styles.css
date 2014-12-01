@@ -1,7 +1,9 @@
 body {
   background-color: #eeeeee;
   padding-left: 1em;
-  padding-right: 1em; }
+  padding-right: 1em;
+  margin-left: 90px;
+  margin-right: 90px; }
 
 h1 a {
   color: #bb8800; }
@@ -21,7 +23,7 @@ ul#nav {
 footer {
   padding: 0.1ex 2em;
   margin-top: 2em;
-  border-top: solid 2px #facc15;
+  border-top: solid 2px #FACC15;
   background-color: #ccffcc; }
 
 .login {
@@ -30,3 +32,5 @@ footer {
   width: 30%;
   border: orange solid 2px;
   padding: 1ex; }
+
+/*# sourceMappingURL=styles.css.map */
