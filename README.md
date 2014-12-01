@@ -21,9 +21,11 @@ Verze [rizeni_pristupu](http://github.com/spseol/public_python/releases/tag/rize
 * release [zaklad](http://github.com/spseol/public_python/releases/tag/rizeni_pristupu)
 * tag [zaklad](http://github.com/spseol/public_python/tree/rizeni_pristupu)
 
-Tato verze obsahuje základní kostru budoucího webu.
-Do základní šablony `base.html` se vkládají další šablony. Je zde základní
-podpora `sesion` s přihlášením a odhlášením.
+Tato verze řídí přístup k jednotlivým stránkám pomocí dekorátoru `prihlasit`.
+Do některých sekcí je možný přístup pouze pokud je uživatel přihlášen.
+Nepřihlášeným uživatelům je skryta část menu. Pokud uživatel požaduje stránku,
+která vyžaduje přihlášení je nejprve přesměrován na přihlášení a po přihlášení
+je přesměrován na původně požadovanou stránku.
 
 Užitečné odkazy
 ---------------
