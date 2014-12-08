@@ -57,10 +57,10 @@ def login():
         else:
             return render_template('login.html', )
     if request.method == 'POST':
-        jmeno = request.form['jmeno']
+        jmeno = request.form['jmeno'].split()[0]
         heslo = request.form['heslo']
-        if jmeno == 'marek' and len(heslo):
-            session['user'] = 'Marek'
+        if len(jmeno) and len(heslo):
+            session['user'] = jmeno
             if 'url' in request.form:
                 return redirect(request.form['url'])
             else:
